@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+margin: 0;
+}
+
+code {
+font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+monospace;
+}
+
+.container {
+width: 100%;
+padding: 0 15px;
+margin: auto;
+}
+
+
+@media (min-width:900px) {
+.container {
+width: 1142px;
+padding: 0;
+}
+}

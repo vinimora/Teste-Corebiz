@@ -1,0 +1,27 @@
+
+<div *ngIf="product" class="productCard">
+  <div *ngIf="product.listPrice" class="discount">
+    <span>
+      OFF
+    </span>
+  </div>
+        <img [src]="product.imageUrl" [alt]="product.productName" />
+        <p class="productName">{{product.productName}}</p>
+      <div class="starsBlock">
+          {{product.stars}} estrelas
+      </div>
+      <div class="priceBlock">
+        <p class="fullPrice">
+            por <strong>R$ {{parseMoney(product.price)}}</strong>
+        </p>
+        <span *ngIf="!mainInstallments" class="installments hidden">
+          À vista
+        </span>
+        <span *ngIf="mainInstallments" class="installments">
+          ou em {{mainInstallments.quantity}}x de R${{parseMoney(mainInstallments.value)}}
+        </span>
+    </div>
+      <button class="btnProducts">
+          Compra
+        </button>
+      </div>

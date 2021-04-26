@@ -1,0 +1,119 @@
+/* bg header */
+
+#mainHeader {
+  position: fixed;
+  width: 100vw;
+  height: 80px;
+  left: 0px;
+  top: 0px;
+  background: #FFFFFF;
+  z-index: 999;
+}
+
+#mainHeader .container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+#mainHeader input {
+  font-size: 13px;
+  line-height: 18px;
+  color: #7A7A7A;
+  border: 0;
+  border-bottom: 1px solid #7A7A7A;
+  width: 100%;
+  outline: none;
+  height: 32px;
+  padding: 10px 0;
+}
+
+.searchField {
+  width: 718px;
+  position: relative;
+  height: 32px;
+}
+
+.searchField img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.myAccount {
+  background: transparent;
+  border: none;
+  outline: none;
+  align-items: center;
+  height: 20px;
+  display: flex;
+}
+
+
+
+.cart {
+  background: transparent;
+  border: none;
+  outline: none;
+  align-items: center;
+  height: 20px;
+  display: flex;
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+.cart .cartItems {
+  background-color: #F8475F;
+  height: 14px;
+  width: 14px;
+  line-height: 14px;
+  font-size: 10px;
+  border-radius: 100%;
+  color: #ffffff;
+  margin-left: 9px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.sideOptions {
+  display: flex;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  #mainHeader {
+    width: 100%;
+    min-width: 320px;
+
+ }
+
+ .column .mainLogo {
+   width: 22vw;
+   max-width: 200px;
+   min-width: 102,46px;
+
+ }
+ .column .searchField{
+   width: 200px;
+   height: 22px;
+ }
+
+ .column .searchField img{
+   width: 18px;
+ }
+
+
+
+ .myAccount img{
+    width: 1.4vw;
+    min-width: 18px;
+    height: 18px;
+ }
+ .cart img {
+   width: 18px;
+   height: 18px;
+ }
+}

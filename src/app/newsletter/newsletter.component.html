@@ -1,0 +1,27 @@
+<div class="newsLetterComponent">
+  <div class="container">
+    <h2 class="title">Paticipe de nossas news com promoções e novidades!</h2>
+    <form *ngIf="!sent" (submit)="submitForm($event)">
+      <div class="col-auto">
+        <input name="name" type="text" placeholder="Digite seu nome"  required/>
+      </div>
+      <div class="col-auto">
+        <input name="email" type="Email" placeholder="Digite seu email" required/>
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn">Eu quero!</button>
+      </div>
+    </form>
+    <div class="success" *ngIf="sent">
+      <p>
+        Seu e-mail foi cadastrado com sucesso!
+      </p>
+      <p>
+        A partir de agora você receberá as novidade e ofertas exclusivas.
+      </p>
+      <button class="btn" (click)="backToForm()">
+        Cadastrar novo email
+      </button>
+    </div>
+  </div>
+</div>
