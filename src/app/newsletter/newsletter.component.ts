@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { Validators } from '@angular/forms';
 const apiCorebiz = 'https://corebiz-test.herokuapp.com/api';
 @Component({
 selector: 'app-newsletter',
@@ -6,8 +8,22 @@ templateUrl: './newsletter.component.html',
 styleUrls: ['./newsletter.component.css']
   })
 export class NewsletterComponent implements OnInit {
+  [x: string]: any;
+  userEmails = new FormGroup({
+  	primaryEmail: new FormControl('',[
+    	Validators.required,
+    	Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]),
+      primaryName: new FormControl('',[Validators.required])
 
-  constructor() { }
+  });
+  get primEmail(){
+ return this.userEmails.get('primaryEmail')
+ }
+ get primName(){
+return this.userEmails.get('primaryName')
+}
+
+constructor() {}
   sent = false;
   showSuccess(){
   this.sent = true;
@@ -46,6 +62,7 @@ ev.preventDefault();
 return false;
 }
 ngOnInit(): void {
+
 }
 
 }
